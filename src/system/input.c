@@ -20,7 +20,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include "input.h"
 
-void doKeyUp(SDL_KeyboardEvent* event)
+void doKeyUp(SDL_KeyboardEvent *event)
 {
 	if (event->repeat == 0 && event->keysym.scancode < MAX_KEYBOARD_KEYS)
 	{
@@ -28,7 +28,7 @@ void doKeyUp(SDL_KeyboardEvent* event)
 	}
 }
 
-void doKeyDown(SDL_KeyboardEvent* event)
+void doKeyDown(SDL_KeyboardEvent *event)
 {
 	if (event->repeat == 0 && event->keysym.scancode < MAX_KEYBOARD_KEYS)
 	{
@@ -38,7 +38,7 @@ void doKeyDown(SDL_KeyboardEvent* event)
 	}
 }
 
-static void doMouseDown(SDL_MouseButtonEvent* event)
+static void doMouseDown(SDL_MouseButtonEvent *event)
 {
 	if (event->button >= 0 && event->button < MAX_MOUSE_BUTTONS)
 	{
@@ -46,7 +46,7 @@ static void doMouseDown(SDL_MouseButtonEvent* event)
 	}
 }
 
-static void doMouseUp(SDL_MouseButtonEvent* event)
+static void doMouseUp(SDL_MouseButtonEvent *event)
 {
 	if (event->button >= 0 && event->button < MAX_MOUSE_BUTTONS)
 	{
@@ -57,7 +57,7 @@ static void doMouseUp(SDL_MouseButtonEvent* event)
 /*
  * Note: the following assumes that SDL_BUTTON_X1 and SDL_BUTTON_X2 are 4 and 5, respectively. They usually are.
  */
-static void doMouseWheel(SDL_MouseWheelEvent* event)
+static void doMouseWheel(SDL_MouseWheelEvent *event)
 {
 	if (event->y == -1)
 	{
@@ -70,7 +70,7 @@ static void doMouseWheel(SDL_MouseWheelEvent* event)
 	}
 }
 
-static void doButtonDown(SDL_JoyButtonEvent* event)
+static void doButtonDown(SDL_JoyButtonEvent *event)
 {
 	if (event->state == SDL_PRESSED)
 	{
@@ -80,7 +80,7 @@ static void doButtonDown(SDL_JoyButtonEvent* event)
 	}
 }
 
-static void doButtonUp(SDL_JoyButtonEvent* event)
+static void doButtonUp(SDL_JoyButtonEvent *event)
 {
 	if (event->state == SDL_RELEASED)
 	{
@@ -88,7 +88,7 @@ static void doButtonUp(SDL_JoyButtonEvent* event)
 	}
 }
 
-static void doJoyAxis(SDL_JoyAxisEvent* event)
+static void doJoyAxis(SDL_JoyAxisEvent *event)
 {
 	if (event->axis < JOYPAD_AXIS_MAX)
 	{
@@ -104,44 +104,44 @@ void doInput(void)
 	{
 		switch (event.type)
 		{
-		case SDL_MOUSEWHEEL:
-			doMouseWheel(&event.wheel);
-			break;
+			case SDL_MOUSEWHEEL:
+				doMouseWheel(&event.wheel);
+				break;
 
-		case SDL_MOUSEBUTTONDOWN:
-			doMouseDown(&event.button);
-			break;
+			case SDL_MOUSEBUTTONDOWN:
+				doMouseDown(&event.button);
+				break;
 
-		case SDL_MOUSEBUTTONUP:
-			doMouseUp(&event.button);
-			break;
+			case SDL_MOUSEBUTTONUP:
+				doMouseUp(&event.button);
+				break;
 
-		case SDL_KEYDOWN:
-			doKeyDown(&event.key);
-			break;
+			case SDL_KEYDOWN:
+				doKeyDown(&event.key);
+				break;
 
-		case SDL_KEYUP:
-			doKeyUp(&event.key);
-			break;
+			case SDL_KEYUP:
+				doKeyUp(&event.key);
+				break;
 
-		case SDL_JOYBUTTONDOWN:
-			doButtonDown(&event.jbutton);
-			break;
+			case SDL_JOYBUTTONDOWN:
+				doButtonDown(&event.jbutton);
+				break;
 
-		case SDL_JOYBUTTONUP:
-			doButtonUp(&event.jbutton);
-			break;
+			case SDL_JOYBUTTONUP:
+				doButtonUp(&event.jbutton);
+				break;
 
-		case SDL_JOYAXISMOTION:
-			doJoyAxis(&event.jaxis);
-			break;
+			case SDL_JOYAXISMOTION:
+				doJoyAxis(&event.jaxis);
+				break;
 
-		case SDL_QUIT:
-			exit(0);
-			break;
+			case SDL_QUIT:
+				exit(0);
+				break;
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 

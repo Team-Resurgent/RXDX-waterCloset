@@ -289,35 +289,11 @@ void showWidgets(const char *groupName, int visible)
 	}
 }
 
-static void dumpAllWidgets(void)
+Widget *getWidget(const char *name, const char *groupName)
 {
-	SDL_Log("=== Widget inventory (group -> name) ===");
-	for (Widget* w = app.widgetsHead.next; w != NULL; w = w->next)
-	{
-		SDL_Log("  [%s] %s", w->groupName, w->name);
-	}
-	SDL_Log("=== end widget inventory ===");
-}
+	Widget *w;
 
-static void dumpGroupWidgets(const char* groupName)
-{
-	int any = 0;
-	SDL_Log("Widgets in group '%s':", groupName);
-	for (Widget* w = app.widgetsHead.next; w != NULL; w = w->next)
-	{
-		if (strcmp(w->groupName, groupName) == 0) {
-			SDL_Log("  - %s", w->name);
-			any = 1;
-		}
-	}
-	if (!any) {
-		SDL_Log("  (none in this group)");
-	}
-}
-
-Widget* getWidget(const char* name, const char* groupName)
-{
-	for (Widget* w = app.widgetsHead.next; w != NULL; w = w->next)
+	for (w = app.widgetsHead.next ; w != NULL ; w = w->next)
 	{
 		if (strcmp(w->name, name) == 0 && strcmp(w->groupName, groupName) == 0)
 		{
@@ -325,21 +301,10 @@ Widget* getWidget(const char* name, const char* groupName)
 		}
 	}
 
-	// Not found: log clearly and dump inventory to help debugging
-	SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_ERROR,
-		"No such widget name='%s', groupName='%s'", name, groupName);
-	dumpGroupWidgets(groupName);
-	dumpAllWidgets();
-
-#if defined(WIDGET_LOOKUP_FATAL)
-	// Old behavior: crash intentionally (not recommended on Xbox)
-	SDL_LogCritical(SDL_LOG_CATEGORY_APPLICATION,
-		"Fatal widget lookup; exiting by request.");
+	SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_CRITICAL, "No such widget name='%s', groupName='%s'", name, groupName);
 	exit(1);
-#else
-	// Non-fatal: let caller handle gracefully
+
 	return NULL;
-#endif
 }
 
 void updateControlWidget(Widget *w, int c)
@@ -361,14 +326,13 @@ static void loadAllWidgets(void)
 	char **filenames, filename[MAX_FILENAME_LENGTH];
 	int count, i;
 
-	filenames = getFileList("widgets", &count);
+	filenames = getFileList("data/widgets", &count);
 
 	app.widgetsTail = &app.widgetsHead;
 
 	for (i = 0 ; i < count ; i++)
 	{
-		sprintf(filename, "widgets/%s", filenames[i]);
-		SDL_Log("Loading widgets from %s", filename);
+		sprintf(filename, "data/widgets/%s", filenames[i]);
 
 		loadWidgets(filename);
 

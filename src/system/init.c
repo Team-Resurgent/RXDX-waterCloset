@@ -30,17 +30,15 @@ void initSDL(void)
 
 	windowFlags = 0;
 
-	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0)
+	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO|SDL_INIT_JOYSTICK) < 0)
 	{
 		printf("Couldn't initialize SDL: %s\n", SDL_GetError());
 		exit(1);
 	}
 
 	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
-	{
-		SDL_Log("Couldn't initialize SDL Mixer\n");
-		fprintf(stderr, "Mix_OpenAudio failed: %s\n", Mix_GetError());
-		fprintf(stderr, "SDL error: %s\n", SDL_GetError());
+    {
+        printf("Couldn't initialize SDL Mixer\n");
 		exit(1);
 	}
 
@@ -56,7 +54,7 @@ void initSDL(void)
 	Mix_Volume(-1, app.config.soundVolume * 1.28);
 	Mix_VolumeMusic(app.config.musicVolume * 1.28);
 
-	Mix_AllocateChannels(CH_MAX);
+    Mix_AllocateChannels(CH_MAX);
 
 	app.window = SDL_CreateWindow("Water Closet", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, app.config.winWidth, app.config.winHeight, windowFlags);
 
@@ -83,7 +81,7 @@ static void initJoypad(void)
 
 	SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO, "%d joysticks available", n);
 
-	for (i = 0; i < n; i++)
+	for (i = 0 ; i < n ; i++)
 	{
 		app.joypad = SDL_JoystickOpen(i);
 
@@ -116,7 +114,7 @@ void initGame(void)
 
 	initGraphics();
 
-	for (i = 0; i < numInitFuns; i++)
+	for (i = 0 ; i < numInitFuns ; i++)
 	{
 		showLoadingStep(i + 1, numInitFuns);
 
@@ -126,14 +124,10 @@ void initGame(void)
 
 static void showLoadingStep(float step, float maxSteps)
 {
-	SDL_Rect r = { 0, 0, 0, 0 };
+	SDL_Rect r;
 	float percent;
 
-	
 	prepareScene();
-
-
-
 
 	r.w = 600;
 	r.h = 6;
