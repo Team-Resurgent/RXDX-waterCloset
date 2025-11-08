@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Media">
+      <UniqueIdentifier>{7e7c095f-383c-4595-b487-c2f4efe7ae61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\entities">
+      <UniqueIdentifier>{26e72d52-f713-4268-8efc-8339e41d9448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\entities">
+      <UniqueIdentifier>{1c12bc68-39a3-455f-a755-b5d597849312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\game">
+      <UniqueIdentifier>{6ea5c7a7-f627-4210-8136-8cb032a96227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game">
+      <UniqueIdentifier>{e78f0744-1576-4985-a04a-4636481c36fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\json">
+      <UniqueIdentifier>{33931253-9b61-4886-a88b-9b674142832c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\json">
+      <UniqueIdentifier>{e1c3b8e6-c056-4018-99a6-a7f28b69acba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plat">
+      <UniqueIdentifier>{fe066af7-88fc-485e-a265-34209ebfe500}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\system">
+      <UniqueIdentifier>{027d142f-d3e8-4442-b0a2-63ded4b85f49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\system">
+      <UniqueIdentifier>{671ab21a-2341-4917-be0a-188a97146573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\world">
+      <UniqueIdentifier>{4d97b200-23af-47a7-a515-11ca065b51c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\world">
+      <UniqueIdentifier>{69a6809a-b0eb-490a-a213-7edfa9bcad3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Media\Copy Assets Here.txt">
+      <Filter>Media</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\clone.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\coin.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\decoration.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\door.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\finalToilet.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\item.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\key.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\manholeCover.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\platform.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\player.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\plunger.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\pressurePlate.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\pushBlock.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\roofSpikes.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\slimeDrip.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\spikes.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\spitter.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\toilet.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\trafficLight.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\vomitToilet.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\waterButton.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\waterPistol.c">
+      <Filter>Source Files\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\story.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\title.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\credits.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\ending.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\game.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\meta.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\options.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\stageSelect.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\stats.c">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\json\cJSON.c">
+      <Filter>Source Files\json</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\atlas.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\controls.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\draw.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\init.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\input.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\io.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\lookup.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\sound.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\text.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\textures.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\util.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\widgets.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\system\wipe.c">
+      <Filter>Source Files\system</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\quadtree.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\stage.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\camera.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\entities.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\entityFactory.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\map.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\world\particles.c">
+      <Filter>Source Files\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plat\win32\win32Init.c">
+      <Filter>Header Files\plat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\create_save_folder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mapEditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\clone.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\coin.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\decoration.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\door.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\finalToilet.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\item.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\key.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\manholeCover.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\platform.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\player.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\plunger.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\pressurePlate.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\pushBlock.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\roofSpikes.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\slimeDrip.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\spikes.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\spitter.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\toilet.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\trafficLight.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\vomitToilet.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\waterButton.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\entities\waterPistol.h">
+      <Filter>Header Files\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\credits.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\ending.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\game.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\meta.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\options.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\stageSelect.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\stats.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\story.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\title.h">
+      <Filter>Header Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\json\cJSON.h">
+      <Filter>Header Files\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\atlas.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\controls.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\draw.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\init.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\input.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\io.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\lookup.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\sound.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\text.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\textures.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\util.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\widgets.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\system\wipe.h">
+      <Filter>Header Files\system</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\camera.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\entities.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\entityFactory.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\map.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\particles.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\quadtree.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\world\stage.h">
+      <Filter>Header Files\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plat\win32\win32Init.h">
+      <Filter>Header Files\plat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\build_defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dirent_compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zlib_stub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\path_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

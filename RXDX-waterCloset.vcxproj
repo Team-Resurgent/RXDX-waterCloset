@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{5dd3c6fd-853b-454b-b228-d77f3b680524}</ProjectGuid>
+    <RootNamespace>RXDX-waterCloset</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>RXDX-waterCloset</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(RXDK_LIBS)include</IncludePath>
+    <ExternalIncludePath>$(RXDK_LIBS)include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x\include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x_image\include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x_mixer\include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x_ttf\include</ExternalIncludePath>
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(RXDK_LIBS)lib</ExcludePath>
+    <ReferencePath>$(RXDK_LIBS)lib</ReferencePath>
+    <LibraryPath>$(RXDK_LIBS)lib;$(ProjectDir)RXDK-SDL2x\libs\$(Configuration)</LibraryPath>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(ProjectDir)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(RXDK_LIBS)include</IncludePath>
+    <ExternalIncludePath>$(RXDK_LIBS)include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x\include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x_image\include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x_mixer\include;$(ProjectDir)..\RXDK-SDL2x\libSDL2x_ttf\include</ExternalIncludePath>
+    <LibraryWPath />
+    <SourcePath />
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(RXDK_LIBS)lib</ExcludePath>
+    <ReferencePath>$(RXDK_LIBS)lib</ReferencePath>
+    <LibraryPath>$(RXDK_LIBS)lib;$(ProjectDir)RXDK-SDL2x\libs\$(Configuration)</LibraryPath>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(ProjectDir)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>XBOX;_XBOX;__XBOX__;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)libSDL2x_image\include;$(SolutionDir)include;$(SolutionDir)libSDL2x_ttf\include;$(SolutionDir)libSDL2x_ttf\external\freetype\include;$(SolutionDir)libSDL2x_mixer\include</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/arch:SSE /Zc:sizedDealloc- %(AdditionalOptions)</AdditionalOptions>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <CompileAs>Default</CompileAs>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <GuardEHContMetadata>
+      </GuardEHContMetadata>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>xboxkrnl.lib;xapilibd.lib;xbdm.lib;d3d8d.lib;d3dx8d.lib;dsoundd.lib;xkbd.lib;libsdl2x.lib;libSDL2x_image.lib;freetype-xbox.lib;libSDL2x_ttf.lib;libSDL2x_Mixer.lib;libcmtd.lib;libcpmtd.lib</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <BaseAddress>
+      </BaseAddress>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateMapFile>true</GenerateMapFile>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Message>Creating Xbox Image...</Message>
+      <Command>"$(RXDK_LIBS)bin\patchSubsystem.exe" -i="$(OutDir)$(TargetFileName)" -s=0x000E
+"$(RXDK_LIBS)bin\imagebld.exe" /in:"$(OutDir)$(TargetFileName)" /out:"$(OutDir)$(TargetName).xbe" /nologo /stack:65536 /debug /nolibwarn
+MKDIR "$(OutDir)Build\$(ProjectName)"
+COPY /Y "$(OutDir)$(TargetName).xbe" "$(OutDir)Build\$(ProjectName)\default.xbe"
+XCOPY /I /E /S /Y /F "$(ProjectDir)Media\*" "$(OutDir)Build\$(ProjectName)"
+MKDIR "$(OutDir)XISO"
+"$(RXDK_LIBS)bin\xdvdfs.exe" pack "$(OutDir)Build\$(ProjectName)" "$(OutDir)XISO\$(ProjectName).iso"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>XBOX;_XBOX;__XBOX__;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)libSDL2x_image\include;$(SolutionDir)include;$(SolutionDir)libSDL2x_ttf\include;$(SolutionDir)libSDL2x_ttf\external\freetype\include;$(SolutionDir)libSDL2x_mixer\include</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/arch:SSE /Zc:sizedDealloc- %(AdditionalOptions)</AdditionalOptions>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <CompileAs>Default</CompileAs>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>xboxkrnl.lib;xapilib.lib;d3d8.lib;d3dx8.lib;dsound.lib;xkbd.lib;libsdl2x.lib;libSDL2x_image.lib;freetype-xbox.lib;libSDL2x_ttf.lib;libSDL2x_Mixer.lib;libcmt.lib</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <BaseAddress>
+      </BaseAddress>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateMapFile>true</GenerateMapFile>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Message>Creating Xbox Image...</Message>
+      <Command>"$(RXDK_LIBS)bin\patchSubsystem.exe" -i="$(OutDir)$(TargetFileName)" -s=0x000E
+"$(RXDK_LIBS)bin\imagebld.exe" /in:"$(OutDir)$(TargetFileName)" /out:"$(OutDir)$(TargetName).xbe" /nologo /stack:65536 /debug /nolibwarn
+MKDIR "$(OutDir)Build\$(ProjectName)"
+COPY /Y "$(OutDir)$(TargetName).xbe" "$(OutDir)Build\$(ProjectName)\default.xbe"
+XCOPY /I /E /S /Y /F "$(ProjectDir)Media\*" "$(OutDir)Build\$(ProjectName)"
+MKDIR "$(OutDir)XISO"
+"$(RXDK_LIBS)bin\xdvdfs.exe" pack "$(OutDir)Build\$(ProjectName)" "$(OutDir)XISO\$(ProjectName).iso"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="Media\Copy Assets Here.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\create_save_folder.cpp" />
+    <ClCompile Include="src\entities\clone.c" />
+    <ClCompile Include="src\entities\coin.c" />
+    <ClCompile Include="src\entities\decoration.c" />
+    <ClCompile Include="src\entities\door.c" />
+    <ClCompile Include="src\entities\finalToilet.c" />
+    <ClCompile Include="src\entities\item.c" />
+    <ClCompile Include="src\entities\key.c" />
+    <ClCompile Include="src\entities\manholeCover.c" />
+    <ClCompile Include="src\entities\platform.c" />
+    <ClCompile Include="src\entities\player.c" />
+    <ClCompile Include="src\entities\plunger.c" />
+    <ClCompile Include="src\entities\pressurePlate.c" />
+    <ClCompile Include="src\entities\pushBlock.c" />
+    <ClCompile Include="src\entities\roofSpikes.c" />
+    <ClCompile Include="src\entities\slimeDrip.c" />
+    <ClCompile Include="src\entities\spikes.c" />
+    <ClCompile Include="src\entities\spitter.c" />
+    <ClCompile Include="src\entities\toilet.c" />
+    <ClCompile Include="src\entities\trafficLight.c" />
+    <ClCompile Include="src\entities\vomitToilet.c" />
+    <ClCompile Include="src\entities\waterButton.c" />
+    <ClCompile Include="src\entities\waterPistol.c" />
+    <ClCompile Include="src\game\credits.c" />
+    <ClCompile Include="src\game\ending.c" />
+    <ClCompile Include="src\game\game.c" />
+    <ClCompile Include="src\game\meta.c" />
+    <ClCompile Include="src\game\options.c" />
+    <ClCompile Include="src\game\stageSelect.c" />
+    <ClCompile Include="src\game\stats.c" />
+    <ClCompile Include="src\game\story.c" />
+    <ClCompile Include="src\game\title.c" />
+    <ClCompile Include="src\json\cJSON.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\plat\win32\win32Init.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\system\atlas.c" />
+    <ClCompile Include="src\system\controls.c" />
+    <ClCompile Include="src\system\draw.c" />
+    <ClCompile Include="src\system\init.c" />
+    <ClCompile Include="src\system\input.c" />
+    <ClCompile Include="src\system\io.c" />
+    <ClCompile Include="src\system\lookup.c" />
+    <ClCompile Include="src\system\sound.c" />
+    <ClCompile Include="src\system\text.c" />
+    <ClCompile Include="src\system\textures.c" />
+    <ClCompile Include="src\system\util.c" />
+    <ClCompile Include="src\system\widgets.c" />
+    <ClCompile Include="src\system\wipe.c" />
+    <ClCompile Include="src\world\camera.c" />
+    <ClCompile Include="src\world\entities.c" />
+    <ClCompile Include="src\world\entityFactory.c" />
+    <ClCompile Include="src\world\map.c" />
+    <ClCompile Include="src\world\particles.c" />
+    <ClCompile Include="src\world\quadtree.c" />
+    <ClCompile Include="src\world\stage.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\build_defs.h" />
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\defs.h" />
+    <ClInclude Include="src\dirent_compat.h" />
+    <ClInclude Include="src\entities\clone.h" />
+    <ClInclude Include="src\entities\coin.h" />
+    <ClInclude Include="src\entities\decoration.h" />
+    <ClInclude Include="src\entities\door.h" />
+    <ClInclude Include="src\entities\finalToilet.h" />
+    <ClInclude Include="src\entities\item.h" />
+    <ClInclude Include="src\entities\key.h" />
+    <ClInclude Include="src\entities\manholeCover.h" />
+    <ClInclude Include="src\entities\platform.h" />
+    <ClInclude Include="src\entities\player.h" />
+    <ClInclude Include="src\entities\plunger.h" />
+    <ClInclude Include="src\entities\pressurePlate.h" />
+    <ClInclude Include="src\entities\pushBlock.h" />
+    <ClInclude Include="src\entities\roofSpikes.h" />
+    <ClInclude Include="src\entities\slimeDrip.h" />
+    <ClInclude Include="src\entities\spikes.h" />
+    <ClInclude Include="src\entities\spitter.h" />
+    <ClInclude Include="src\entities\toilet.h" />
+    <ClInclude Include="src\entities\trafficLight.h" />
+    <ClInclude Include="src\entities\vomitToilet.h" />
+    <ClInclude Include="src\entities\waterButton.h" />
+    <ClInclude Include="src\entities\waterPistol.h" />
+    <ClInclude Include="src\game\credits.h" />
+    <ClInclude Include="src\game\ending.h" />
+    <ClInclude Include="src\game\game.h" />
+    <ClInclude Include="src\game\meta.h" />
+    <ClInclude Include="src\game\options.h" />
+    <ClInclude Include="src\game\stageSelect.h" />
+    <ClInclude Include="src\game\stats.h" />
+    <ClInclude Include="src\game\story.h" />
+    <ClInclude Include="src\game\title.h" />
+    <ClInclude Include="src\json\cJSON.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\mapEditor.h" />
+    <ClInclude Include="src\path_util.h" />
+    <ClInclude Include="src\plat\win32\win32Init.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\structs.h" />
+    <ClInclude Include="src\system\atlas.h" />
+    <ClInclude Include="src\system\controls.h" />
+    <ClInclude Include="src\system\draw.h" />
+    <ClInclude Include="src\system\init.h" />
+    <ClInclude Include="src\system\input.h" />
+    <ClInclude Include="src\system\io.h" />
+    <ClInclude Include="src\system\lookup.h" />
+    <ClInclude Include="src\system\sound.h" />
+    <ClInclude Include="src\system\text.h" />
+    <ClInclude Include="src\system\textures.h" />
+    <ClInclude Include="src\system\util.h" />
+    <ClInclude Include="src\system\widgets.h" />
+    <ClInclude Include="src\system\wipe.h" />
+    <ClInclude Include="src\world\camera.h" />
+    <ClInclude Include="src\world\entities.h" />
+    <ClInclude Include="src\world\entityFactory.h" />
+    <ClInclude Include="src\world\map.h" />
+    <ClInclude Include="src\world\particles.h" />
+    <ClInclude Include="src\world\quadtree.h" />
+    <ClInclude Include="src\world\stage.h" />
+    <ClInclude Include="src\zlib_stub.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project requires Team Resurgent's XDK Libs installed on this computer. Search for them on http://www.theusualplaces.co.uk.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists($(RXDK_LIBS))" Text="$([System.String]::Format('$(ErrorText)'))" />
+  </Target>
+</Project>
