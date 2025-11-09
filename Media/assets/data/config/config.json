@@ -16,12 +16,12 @@
 		"pause" : 41
 	},
 	"joypadControls" : {
-		"left" : -1,
-		"right" : -1,
-		"jump" : -1,
-		"use" : -1,
-		"clone" : -1,
-		"restart" : -1,
-		"pause" : -1
+		"left" : 22,
+		"right" : 23,
+		"jump" : 0,
+		"use" : 2,
+		"clone" : 3,
+		"restart" : 7,
+		"pause" : 6
 	}
 }

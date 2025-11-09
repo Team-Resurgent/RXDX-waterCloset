@@ -27,6 +27,7 @@ int isControl(int type)
 	key = app.config.keyControls[type];
 	btn = app.config.joypadControls[type];
 
+	/* Continuous movement via axes (unchanged) */
 	if (type == CONTROL_LEFT && app.joypadAxis[JOYPAD_AXIS_X] < -app.config.deadzone)
 	{
 		return 1;
@@ -47,12 +48,37 @@ int isControl(int type)
 		return 1;
 	}
 
-	return ((key != 0 && app.keyboard[key]) || (btn != -1 && app.joypadButton[btn]));
+	/* Read keyboard / joystick states */
+	const int keyDown = (key != 0 && app.keyboard[key]) ? 1 : 0;
+	const int btnDown = (btn != -1 && app.joypadButton[btn]) ? 1 : 0;
+
+	/* One-shot for action buttons: clear once detected so hold doesn't retrigger */
+	if (type == CONTROL_JUMP || type == CONTROL_USE || type == CONTROL_CLONE ||
+		type == CONTROL_RESTART || type == CONTROL_PAUSE)
+	{
+		if (keyDown || btnDown)
+		{
+			/* Clear whichever source fired so it only triggers once per press */
+			if (keyDown && key != 0) {
+				app.keyboard[key] = 0;
+			}
+			if (btnDown && btn != -1) {
+				app.joypadButton[btn] = 0;
+			}
+			return 1;
+		}
+		/* nothing pressed */
+		return 0;
+	}
+
+	/* Default behaviour (held is fine) */
+	return (keyDown || btnDown);
 }
 
 int isAcceptControl(void)
 {
-	return (app.keyboard[SDL_SCANCODE_SPACE] ||app.keyboard[SDL_SCANCODE_RETURN] || isControl(CONTROL_USE) || isControl(CONTROL_JUMP));
+	return (app.keyboard[SDL_SCANCODE_SPACE] || app.keyboard[SDL_SCANCODE_RETURN] ||
+		isControl(CONTROL_USE) || isControl(CONTROL_JUMP));
 }
 
 void clearControl(int type)
